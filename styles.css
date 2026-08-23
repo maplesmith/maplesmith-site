@@ -5,7 +5,6 @@
   --line: #cfcec3;
   --maple: #bb4d32;
   --moss: #405d4d;
-  --sky: #a9c6cc;
   --serif: "Fraunces", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
   --mono: "DM Mono", monospace;
@@ -56,21 +55,9 @@ nav {
 }
 
 .mark {
-  display: grid;
   width: 30px;
   height: 30px;
-  place-items: center;
-  border-radius: 50% 50% 42% 50%;
-  background: var(--maple);
-  color: var(--paper);
-  font-family: var(--serif);
-  font-size: 1rem;
-  transform: rotate(-12deg);
-}
-
-.mark::first-letter {
-  display: inline-block;
-  transform: rotate(12deg);
+  display: block;
 }
 
 .nav-link,
@@ -159,84 +146,16 @@ h1 em {
   position: relative;
   min-height: 365px;
   overflow: hidden;
-  background: var(--sky);
 }
 
-.sun {
+.project-art-image {
   position: absolute;
-  top: 18%;
-  right: 20%;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  background: #f4d98a;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-
-.hill {
-  position: absolute;
-  bottom: -6%;
-  left: -10%;
-  width: 115%;
-  height: 43%;
-  border-radius: 50% 50% 0 0 / 75% 75% 0 0;
-}
-
-.hill-back {
-  bottom: 15%;
-  background: #718f78;
-  transform: rotate(-5deg);
-}
-
-.hill-front {
-  background: #355b4a;
-  transform: rotate(3deg);
-}
-
-.house {
-  position: absolute;
-  z-index: 1;
-  bottom: 28%;
-  left: 43%;
-  width: 118px;
-  height: 92px;
-  background: #f6f3ec;
-  box-shadow: 0 8px 0 rgba(31, 48, 43, 0.12);
-}
-
-.house::before {
-  position: absolute;
-  top: -54px;
-  left: -13px;
-  width: 0;
-  height: 0;
-  border-right: 72px solid transparent;
-  border-bottom: 54px solid #ba4c32;
-  border-left: 72px solid transparent;
-  content: "";
-}
-
-.house::after {
-  position: absolute;
-  bottom: 0;
-  left: 48px;
-  width: 24px;
-  height: 44px;
-  background: #355b4a;
-  content: "";
-}
-
-.house i {
-  position: absolute;
-  top: 23px;
-  width: 16px;
-  height: 18px;
-  background: #a9c6cc;
-}
-
-.house i:nth-child(1) { left: 18px; }
-.house i:nth-child(2) { right: 18px; }
-.house i:nth-child(3) { display: none; }
-.house i:nth-child(4) { display: none; }
 
 .project-copy {
   display: flex;
