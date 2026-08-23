@@ -82,6 +82,10 @@ footer a:not(.wordmark) {
   text-transform: uppercase;
 }
 
+.hero-eyebrow {
+  text-transform: none;
+}
+
 h1,
 h2,
 p {
