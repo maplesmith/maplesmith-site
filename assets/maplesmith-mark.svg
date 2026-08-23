@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <g transform="rotate(-12 512 512)">
+    <path fill="#BB4D32" d="M512 128C712 128 858 275 858 472C858 669 700 864 508 864C315 864 166 715 166 520C166 323 312 128 512 128Z"/>
+    <text x="512" y="650" fill="#F6F3EC" font-family="Fraunces, Georgia, serif" font-size="530" font-weight="600" text-anchor="middle">M</text>
+  </g>
+</svg>
