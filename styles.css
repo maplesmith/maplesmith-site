@@ -467,7 +467,16 @@ footer p {
     gap: 4px 18px;
   }
 
-  /* too narrow to share a row: the links drop below the label and rule */
+
+  .page-hero h1,
+  .doc h1 {
+    font-size: clamp(2.4rem, 11vw, 3.2rem);
+  }
+}
+
+/* the label and links share a row down to about 400px, below which the rule
+   between them shrinks to a stub; there, the links drop to their own line */
+@media (max-width: 400px) {
   .section-head .section-heading {
     flex-wrap: wrap;
     row-gap: 14px;
@@ -475,10 +484,5 @@ footer p {
 
   .section-head .section-nav {
     flex-basis: 100%;
-  }
-
-  .page-hero h1,
-  .doc h1 {
-    font-size: clamp(2.4rem, 11vw, 3.2rem);
   }
 }
