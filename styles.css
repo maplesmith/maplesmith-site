@@ -290,14 +290,64 @@ footer p {
 
 /* App sections and document pages */
 
-.subnav {
+.section-head {
+  padding-top: 4px;
+}
+
+.breadcrumb {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.breadcrumb-sep {
+  padding: 0 8px;
+  color: var(--line);
+}
+
+.section-nav {
   display: flex;
-  gap: 20px;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 4px 26px;
+  padding: 0;
+}
+
+.section-nav a {
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.section-nav a:hover {
+  color: var(--ink);
+}
+
+.section-nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--maple);
 }
 
 .page-hero {
-  padding: clamp(56px, 9vw, 96px) 0 clamp(40px, 6vw, 64px);
+  padding: clamp(40px, 7vw, 72px) 0 clamp(40px, 6vw, 64px);
 }
 
 .page-hero h1,
@@ -343,7 +393,7 @@ footer p {
 
 .doc {
   max-width: 720px;
-  padding: clamp(48px, 8vw, 80px) 0 clamp(72px, 11vw, 120px);
+  padding: clamp(36px, 6vw, 60px) 0 clamp(72px, 11vw, 120px);
 }
 
 .doc-meta {
@@ -407,14 +457,8 @@ footer p {
 }
 
 @media (max-width: 680px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 12px 16px;
-  }
-
-  .subnav {
-    flex-wrap: wrap;
-    gap: 14px;
+  .section-nav {
+    gap: 4px 18px;
   }
 
   .page-hero h1,
