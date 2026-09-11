@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Privacy policy for Perch Home, a home dashboard app for iPad." />
+    <meta name="theme-color" content="#f6f3ec" />
+    <title>Perch Home privacy policy - Maplesmith</title>
+    <link rel="icon" href="../../assets/maplesmith-mark.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="../../assets/maplesmith-mark-avatar-180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <main>
+      <nav aria-label="Primary navigation">
+        <a class="wordmark" href="../../" aria-label="Maplesmith home">
+          <img class="mark" src="../../assets/maplesmith-mark.svg" alt="" />
+          <span>Maplesmith</span>
+        </a>
+        <span class="subnav">
+          <a class="nav-link" href="../">Perch Home</a>
+          <a class="nav-link" href="../terms/">Terms</a>
+          <a class="nav-link" href="../support/">Support</a>
+        </span>
+      </nav>
+
+      <article class="doc">
+        <p class="eyebrow">Perch Home</p>
+        <h1>Privacy Policy</h1>
+        <p class="doc-meta">Last updated September 10, 2026</p>
+
+        <p>
+          Perch Home is a personal iPad kiosk app. This policy describes what data the app accesses
+          and how it is used.
+        </p>
+
+        <h2>Data accessed on your device</h2>
+        <p>
+          Perch Home accesses the following on your device, solely to display information on screen:
+        </p>
+        <ul>
+          <li>Apple Calendar - to show today&rsquo;s events</li>
+          <li>Photos - to display a slideshow from your photo library</li>
+        </ul>
+        <p>None of this data is transmitted off your device by the app.</p>
+
+        <h2>Earlier versions of the app</h2>
+        <p>
+          Versions 1.1.0 and earlier also displayed Apple Home devices and camera feeds. Those
+          features have since been removed from Perch Home. If your iPad is still running one of
+          those versions, and its dashboard shows a Smart Home or Cameras widget, that version
+          also accesses:
+        </p>
+        <ul>
+          <li>HomeKit - to show smart home device status and camera feeds</li>
+          <li>Local network - to connect to HomeKit devices on your network</li>
+        </ul>
+        <p>
+          As above, none of that data is transmitted off your device by the app, and Perch Home
+          does not intentionally send HomeKit camera content to Sentry.
+        </p>
+
+        <h2>Third-party services</h2>
+        <ul>
+          <li>
+            <strong>Google Calendar</strong> - if you choose to connect a Google account, the app
+            uses the Google Calendar API with read-only access to fetch calendar data for display on
+            screen. See the Google Calendar Data section below for details. This is governed by
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer"
+              >Google&rsquo;s Privacy Policy</a
+            >.
+          </li>
+          <li>
+            <strong>Perch Home backend and Apple WeatherKit</strong> - your configured weather
+            location (latitude and longitude), timezone, and locale are sent to the Perch Home
+            backend to fetch weather data. The backend uses Apple WeatherKit to service the request
+            and may cache weather responses for up to five minutes using a rounded location key.
+            This is governed by
+            <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer"
+              >Apple&rsquo;s Privacy Policy</a
+            >
+            and
+            <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer"
+              >Cloudflare&rsquo;s Privacy Policy</a
+            >.
+          </li>
+          <li>
+            <strong>TelemetryDeck</strong> - the app sends aggregate usage events (such as app
+            launch, onboarding steps completed, and which features are active) to TelemetryDeck for
+            product analytics. Events use a stable random install identifier and structured event
+            labels that do not include personal information. Perch Home does not send user text,
+            weather location, calendar titles, email addresses, Google account info, photo metadata,
+            or other user-generated strings to TelemetryDeck. This is governed by
+            <a href="https://telemetrydeck.com/privacy/" target="_blank" rel="noreferrer"
+              >TelemetryDeck&rsquo;s Privacy Policy</a
+            >.
+          </li>
+          <li>
+            <strong>Sentry</strong> - the app may send crash reports, error reports, performance
+            diagnostics, device details, operating system details, and stack traces to Sentry to
+            diagnose and fix app reliability issues. Perch Home scrubs known sensitive keys before
+            sending error reports and does not intentionally send calendar content, photo content,
+            Wi-Fi passwords, Google access tokens, or backend access tokens to Sentry. This is
+            governed by
+            <a href="https://sentry.io/privacy/" target="_blank" rel="noreferrer"
+              >Sentry&rsquo;s Privacy Policy</a
+            >.
+          </li>
+        </ul>
+
+        <h2>Backend Security Data</h2>
+        <p>
+          Perch Home uses Apple&rsquo;s App Attest service to protect backend weather requests.
+          During enrollment and refresh, the app sends device attestation data, a generated App
+          Attest key identifier, and a backend device identifier to the Perch Home backend. The
+          backend stores device enrollment records and hashed access tokens to verify that weather
+          requests come from a valid app installation. This data is used only for app security and
+          backend access control, and is not used for advertising or tracking.
+        </p>
+
+        <h2>Google Calendar Data</h2>
+        <p>
+          If you choose to connect Google Calendar, Perch Home requests read-only access to Google
+          Calendar using the <code>https://www.googleapis.com/auth/calendar.readonly</code> scope.
+        </p>
+        <ul>
+          <li>
+            <strong>Data accessed</strong> - Perch Home accesses your Google account email address
+            to show which account is connected, your calendar list and calendar metadata such as
+            calendar IDs, names, and colors, and calendar event data for display in the app,
+            including event titles, start and end times, all-day status, locations, and related
+            calendar metadata.
+          </li>
+          <li>
+            <strong>Data usage</strong> - Perch Home uses Google Calendar data only to let you
+            choose which calendars appear on your dashboard and to display calendar events on your
+            iPad dashboard. Perch Home does not create, edit, delete, or share calendar events.
+          </li>
+          <li>
+            <strong>Data sharing</strong> - Perch Home does not sell Google user data, use it for
+            advertising, use it for credit decisions, or transfer it to data brokers or advertising
+            platforms. Google Calendar event content, calendar names, calendar IDs, and Google
+            account email addresses are not sent to Perch Home analytics services, crash reporting
+            services, backend services, or other third parties.
+          </li>
+          <li>
+            <strong>Data storage and protection</strong> - Google Calendar events are fetched from
+            Google over HTTPS and kept only temporarily in app memory for display. Event content is
+            not saved to Perch Home servers. The app stores local configuration on the device, such
+            as whether Google Calendar is connected and which Google calendar IDs the user selected.
+            Google sign-in credentials and tokens are managed by Google Sign-In and iOS credential
+            storage.
+          </li>
+          <li>
+            <strong>Data retention and deletion</strong> - Google Calendar event content is not
+            retained after it is fetched for display. Local Google Calendar configuration remains on
+            the device until the user disconnects Google Calendar, resets app settings, or deletes
+            the app. Users can disconnect Google Calendar in Perch Home settings, which revokes app
+            access and removes Google calendars from the dashboard. Users can also revoke access
+            from their Google Account permissions page or contact
+            <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a> for help with
+            deletion requests.
+          </li>
+        </ul>
+        <p>
+          Perch Home handles information received from Google APIs in accordance with the
+          <a
+            href="https://developers.google.com/terms/api-services-user-data-policy"
+            target="_blank"
+            rel="noreferrer"
+            >Google API Services User Data Policy</a
+          >, including the Limited Use requirements.
+        </p>
+
+        <h2>Data storage</h2>
+        <p>
+          App settings (weather location, Wi-Fi credentials, dashboard title) are stored locally on
+          your device using app storage and iOS secure storage where appropriate. Weather responses
+          may be cached by the Perch Home backend for up to five minutes. Backend device enrollment
+          records are retained while needed to provide weather access and protect the backend. No
+          data is synced to the cloud or shared with any third party unless described in this
+          policy.
+        </p>
+
+        <h2>Retention and deletion</h2>
+        <p>
+          Local app settings remain on your device until you change them, reset app settings, or
+          delete the app. You can disconnect Google Calendar from Perch Home settings or revoke
+          access from your Google Account. You can reset Perch Home settings in the app to remove
+          local dashboard configuration and secure backend credentials from the device. To request
+          deletion of backend enrollment data or ask a privacy question, contact
+          <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a>.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions? Email <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a>.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <a class="wordmark" href="../../">
+        <img class="mark" src="../../assets/maplesmith-mark.svg" alt="" />
+        <span>Maplesmith</span>
+      </a>
+      <p>Perch Home is made by Maplesmith.</p>
+      <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a>
+    </footer>
+  </body>
+</html>

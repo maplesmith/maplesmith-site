@@ -2,6 +2,26 @@
 
 Static studio website for [maplesmith.dev](https://maplesmith.dev), published with GitHub Pages.
 
+## Site structure
+
+The studio landing page lives at the root. Each app gets its own section directory holding its
+landing page and supporting pages, so a new app is a directory rather than a new domain:
+
+```
+/                      studio landing
+/perch-home/           app page
+/perch-home/privacy    privacy policy
+/perch-home/terms      terms of service
+/perch-home/support    support and troubleshooting
+```
+
+All pages share `styles.css`. Document pages use the `.doc` classes; app landing pages use
+`.page-hero`, `.app-id`, and `.features`.
+
+Perch Home's pages moved here from `perchhome.app` (maplesmith/perchhome#349). That domain
+redirects to these paths and must stay registered while builds compiled with the old URL are
+still in the wild.
+
 ## Brand assets
 
 `assets/maplesmith-mark.svg` is the self-contained vector master. It has no font dependency.
