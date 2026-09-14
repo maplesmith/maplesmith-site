@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Privacy policy for Aviary, a smart home dashboard app for iPad."
+    />
+    <meta name="theme-color" content="#f6f3ec" />
+    <title>Aviary privacy policy - Maplesmith</title>
+    <link rel="icon" href="../../assets/maplesmith-mark.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="../../assets/maplesmith-mark-avatar-180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <main>
+      <nav aria-label="Primary navigation">
+        <a class="wordmark" href="../../" aria-label="Maplesmith home">
+          <img class="mark" src="../../assets/maplesmith-mark.svg" alt="" />
+          <span>Maplesmith</span>
+        </a>
+        <a class="nav-link" href="mailto:hello@maplesmith.dev">Get in touch</a>
+      </nav>
+
+      <div class="section-head">
+        <div class="section-heading">
+          <p class="eyebrow section-label"><a href="../">Aviary</a></p>
+          <span class="rule" aria-hidden="true"></span>
+          <nav class="section-nav" aria-label="Aviary pages">
+            <a href="../privacy/" aria-current="page">Privacy</a>
+            <a href="../terms/">Terms</a>
+            <a href="../support/">Support</a>
+            <a href="../faq/">FAQ</a>
+          </nav>
+        </div>
+      </div>
+
+      <article class="doc">
+        <h1>Privacy Policy</h1>
+        <p class="doc-meta">Last updated September 14, 2026</p>
+
+        <p>
+          Aviary is a smart home dashboard for iPad. It displays the accessories and cameras in your
+          Apple Home, along with weather and the time. This policy describes what data the app
+          accesses, what leaves your device, and who receives it.
+        </p>
+
+        <h2>Your home data stays on your device</h2>
+        <p>
+          Aviary reads the following on your iPad, solely to draw them on screen. None of it is
+          transmitted off your device by the app, and none of it is sent to Maplesmith:
+        </p>
+        <ul>
+          <li>
+            <strong>HomeKit accessory status</strong> - the alarm, locks, thermostats, lights, and
+            sensors in your Apple Home, along with their names, rooms, and current state.
+          </li>
+          <li>
+            <strong>HomeKit camera video</strong> - live feeds from the cameras paired with your
+            Apple Home. Video is streamed from the camera to your iPad and displayed. Aviary does
+            not record, store, upload, or forward camera video.
+          </li>
+          <li>
+            <strong>Local network access</strong> - used to reach the accessories and cameras on
+            your own network.
+          </li>
+        </ul>
+        <p>
+          The Smart Home widget is read-only. Aviary displays accessory status and never unlocks a
+          lock, disarms an alarm, changes a setpoint, toggles a light, or runs a scene.
+        </p>
+
+        <h2>What Aviary sends off the device</h2>
+        <p>Four things leave your iPad, each for a specific purpose:</p>
+        <ul>
+          <li>
+            <strong>Your weather location</strong> - the coordinates of the city you pick, or the
+            location you get from Use My Location, together with your timezone and locale, are sent
+            to the Perch backend to fetch weather. See Weather below.
+          </li>
+          <li>
+            <strong>App security identifiers</strong> - an App Attest key identifier and a
+            backend-issued device identifier, used to prove weather requests come from a genuine
+            copy of the app. See App security below.
+          </li>
+          <li>
+            <strong>Anonymous usage events</strong> - which features are used, under a random
+            install identifier. See Analytics below.
+          </li>
+          <li>
+            <strong>Crash and error reports</strong> - stack traces and device diagnostics when
+            something goes wrong. See Crash reporting below.
+          </li>
+        </ul>
+
+        <h2>Weather</h2>
+        <p>
+          Aviary fetches weather through the Perch backend, a Cloudflare Worker operated by
+          Maplesmith and shared with the Perch Home app, which in turn uses Apple WeatherKit. The
+          request includes your configured weather coordinates, timezone, and locale. The backend
+          may cache weather responses for up to five minutes using a rounded location key. This is
+          governed by
+          <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noreferrer"
+            >Apple&rsquo;s Privacy Policy</a
+          >
+          and
+          <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noreferrer"
+            >Cloudflare&rsquo;s Privacy Policy</a
+          >.
+        </p>
+        <p>
+          Location permission is optional. If you would rather not grant it, search for your city by
+          name instead; the app only ever uses the weather location you have configured, and does
+          not track your location in the background.
+        </p>
+
+        <h2>App security</h2>
+        <p>
+          Aviary uses Apple&rsquo;s App Attest service to protect the backend from abuse. During
+          enrollment and refresh, the app sends device attestation data, a generated App Attest key
+          identifier, and a backend device identifier to the Perch backend. The backend stores
+          device enrollment records and hashed access tokens so it can verify that weather requests
+          come from a valid app installation. This data is used only for app security and backend
+          access control. It is not used for advertising or tracking, and it is not linked to your
+          name or an account.
+        </p>
+
+        <h2>Analytics</h2>
+        <p>
+          Aviary sends aggregate usage events to
+          <a href="https://telemetrydeck.com/privacy/" target="_blank" rel="noreferrer"
+            >TelemetryDeck</a
+          >
+          to understand which features are used and where setup goes wrong. Events are identified by
+          a random install identifier generated on your device. It is not an account, it is not your
+          Apple ID, and it is not joined to anything off the device.
+        </p>
+        <p>
+          The events are fixed labels such as session started, onboarding started, onboarding step
+          completed, onboarding completed, dashboard first loaded, settings opened, widget
+          configuration changed, smart home connected, camera opened, background mode changed, and
+          rating prompt requested, along with the app version and build number.
+        </p>
+        <p>
+          Aviary does not send accessory names, room names, camera names, scene names, accessory
+          state, camera video or stills, your weather location, or any other user-generated text to
+          TelemetryDeck.
+        </p>
+
+        <h2>Crash reporting</h2>
+        <p>
+          Aviary may send crash reports, error reports, stack traces, breadcrumbs, and device
+          context such as device model, operating system version, and available memory to
+          <a href="https://sentry.io/privacy/" target="_blank" rel="noreferrer">Sentry</a> to
+          diagnose and fix reliability problems. Aviary scrubs known sensitive keys before sending
+          reports, and does not intentionally send camera video or stills, accessory names, room
+          names, accessory state, or backend access tokens to Sentry.
+        </p>
+
+        <h2>No tracking, no advertising</h2>
+        <p>
+          Aviary does not track you. It contains no advertising, shares no data with data brokers,
+          and does not join your data with data from other companies for advertising or measurement.
+          Maplesmith does not sell your data. Aviary has no user accounts and does not ask you to
+          sign in.
+        </p>
+
+        <h2>Data storage</h2>
+        <p>
+          Your dashboard configuration - which widgets are shown, which accessories and cameras you
+          selected, and your weather location - is stored locally on your iPad using app storage,
+          with iOS secure storage used for backend credentials. Weather responses may be cached by
+          the Perch backend for up to five minutes. Backend device enrollment records are retained
+          while needed to provide weather access and protect the backend. Nothing else is synced to
+          the cloud or shared with any third party except as described in this policy.
+        </p>
+
+        <h2>Retention and deletion</h2>
+        <p>
+          Local settings remain on your iPad until you change them, reset app settings, or delete
+          the app. Resetting Aviary&rsquo;s settings in the app removes your local dashboard
+          configuration and the secure backend credentials from the device. You can revoke
+          Aviary&rsquo;s access to your home at any time in iOS Settings under Privacy &amp;
+          Security, and to your location in the same place. To request deletion of backend
+          enrollment data or to ask a privacy question, contact
+          <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a>.
+        </p>
+
+        <h2>Children</h2>
+        <p>
+          Aviary is a household display app and is not directed at children. It does not knowingly
+          collect personal information from children.
+        </p>
+
+        <h2>Changes to this policy</h2>
+        <p>
+          If what Aviary collects changes, this page and the app&rsquo;s App Store privacy details
+          will be updated together, and the date at the top of this page will change.
+        </p>
+
+        <h2>Contact</h2>
+        <p>Questions? Email <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a>.</p>
+      </article>
+    </main>
+
+    <footer>
+      <a class="wordmark" href="../../">
+        <img class="mark" src="../../assets/maplesmith-mark.svg" alt="" />
+        <span>Maplesmith</span>
+      </a>
+      <p>Aviary is made by Maplesmith.</p>
+      <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a>
+    </footer>
+  </body>
+</html>

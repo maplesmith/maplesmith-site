@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Frequently asked questions about Aviary, a smart home dashboard app for iPad."
+    />
+    <meta name="theme-color" content="#f6f3ec" />
+    <title>Aviary FAQ - Maplesmith</title>
+    <link rel="icon" href="../../assets/maplesmith-mark.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="../../assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="../../assets/maplesmith-mark-avatar-180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <main>
+      <nav aria-label="Primary navigation">
+        <a class="wordmark" href="../../" aria-label="Maplesmith home">
+          <img class="mark" src="../../assets/maplesmith-mark.svg" alt="" />
+          <span>Maplesmith</span>
+        </a>
+        <a class="nav-link" href="mailto:hello@maplesmith.dev">Get in touch</a>
+      </nav>
+
+      <div class="section-head">
+        <div class="section-heading">
+          <p class="eyebrow section-label"><a href="../">Aviary</a></p>
+          <span class="rule" aria-hidden="true"></span>
+          <nav class="section-nav" aria-label="Aviary pages">
+            <a href="../privacy/">Privacy</a>
+            <a href="../terms/">Terms</a>
+            <a href="../support/">Support</a>
+            <a href="../faq/" aria-current="page">FAQ</a>
+          </nav>
+        </div>
+      </div>
+
+      <article class="doc">
+        <h1>Frequently asked questions</h1>
+
+        <h2>What do I need to set up before Aviary is useful?</h2>
+        <p>
+          A home already set up in Apple&rsquo;s Home app. Aviary reads that home; it is not a way
+          to add accessories. Before installing, you want:
+        </p>
+        <ul>
+          <li>Accessories paired in the Home app and responding there.</li>
+          <li>
+            A home hub - a HomePod or Apple TV - if you want camera feeds. Accessory status works
+            without one as long as the iPad is on the same network as your accessories, but cameras
+            and away-from-home access depend on a hub.
+          </li>
+          <li>The iPad signed in to the same iCloud account as that home.</li>
+        </ul>
+        <p>
+          The first time Aviary asks for home access, iOS shows its own permission prompt. If you
+          decline it, you can change your mind later in iOS Settings &gt; Privacy &amp; Security
+          &gt; HomeKit.
+        </p>
+
+        <h2>Why an iPad, and not an iPhone?</h2>
+        <p>
+          Aviary is designed to be read from across a room rather than held. It is landscape, full
+          screen, and laid out for a device that sits in one place on a counter, a shelf, or a wall
+          mount, and is looked at for a few seconds at a time. That is a different job from a phone
+          app, and the layout would not survive the shrink. Aviary is iPad-only for that reason.
+        </p>
+
+        <h2>Why can I not control anything from Aviary?</h2>
+        <p>
+          That is deliberate. Aviary is a read-only display, so a dashboard left on a counter or by
+          the front door cannot be used to unlock a door, disarm an alarm, or change the heating by
+          anyone who walks past it. Aviary shows you the state of your home; the Apple Home app
+          changes it.
+        </p>
+
+        <h2>What do I see if I have no accessories yet?</h2>
+        <p>
+          Aviary still runs. The Weather and Clock widgets work on any iPad with an internet
+          connection and have nothing to do with your home. The Smart Home and Cameras widgets show
+          an empty state inviting you to connect Apple Home, and they fill in as soon as
+          accessories are available. Nothing breaks, but the app is not doing its main job until
+          there is a home to display.
+        </p>
+
+        <h2>Which cameras work?</h2>
+        <p>
+          Any camera that appears in Apple&rsquo;s Home app and streams there will stream in Aviary,
+          because Aviary uses the same Apple Home connection. A few limits are worth knowing up
+          front:
+        </p>
+        <ul>
+          <li>
+            A camera that only works in its manufacturer&rsquo;s own app, and never appears in the
+            Home app, cannot be displayed.
+          </li>
+          <li>
+            Aviary shows live video. It does not record, store, or play back recorded clips, and it
+            is not a way to review HomeKit Secure Video history.
+          </li>
+          <li>
+            Streams are pulled over your network, so camera feeds need the iPad and the cameras to
+            be reachable from each other.
+          </li>
+          <li>
+            How many feeds run smoothly at once depends on your iPad, your cameras, and your
+            network. You choose which cameras are visible in Aviary settings.
+          </li>
+        </ul>
+
+        <h2>Does my home data leave the iPad?</h2>
+        <p>
+          No. Accessory status and camera video are read on the device and displayed, and are never
+          sent to Maplesmith or anyone else. Weather, app security, analytics, and crash reporting
+          do use the network, and the <a href="../privacy/">privacy policy</a> sets out exactly what
+          each one receives.
+        </p>
+
+        <h2>How is this different from Perch Home?</h2>
+        <p>
+          <a href="../../perch-home/">Perch Home</a> is the family hub: calendars, photos, guest
+          Wi-Fi, weather, and the time. Aviary is the smart home view: accessory status, cameras,
+          weather, and the time. They are sibling apps from the same studio and share the same
+          design, and you can run both on separate iPads if you want both jobs done well.
+        </p>
+
+        <h2>When can I get it?</h2>
+        <!-- COMING SOON: rewrite this answer when v1 is live on the App Store (aviary#34) -->
+        <p>
+          Aviary is still in development and is not on the App Store yet. Email
+          <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a> if you would like to
+          hear when it is released.
+        </p>
+
+        <h2>Something not answered here?</h2>
+        <p>
+          The <a href="../support/">support page</a> covers troubleshooting, or email
+          <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a>.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <a class="wordmark" href="../../">
+        <img class="mark" src="../../assets/maplesmith-mark.svg" alt="" />
+        <span>Maplesmith</span>
+      </a>
+      <p>Aviary is made by Maplesmith.</p>
+      <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a>
+    </footer>
+  </body>
+</html>
