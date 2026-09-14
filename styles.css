@@ -486,3 +486,62 @@ footer p {
     flex-basis: 100%;
   }
 }
+
+/* The studio index carried a single project tile until Aviary was added; stacked
+   tiles need separating or their art panels read as one continuous block. */
+
+.project + .project {
+  margin-top: clamp(28px, 4vw, 44px);
+}
+
+/* Pre-release apps: tile art for an app with no device screenshot yet, and the
+   coming-soon marker. Search the site for "Coming soon" to find every place the
+   marker appears when an app ships. */
+
+.project-art.is-icon-only {
+  justify-content: center;
+  padding: clamp(32px, 6vw, 56px);
+}
+
+.project-icon-art {
+  display: block;
+  width: min(60%, 180px);
+  height: auto;
+  border-radius: 22.5%;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid var(--maple);
+  color: var(--maple);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.09em;
+  line-height: 1.6;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.project-type .status-badge {
+  margin-left: 10px;
+}
+
+.hero-badge {
+  margin-bottom: 20px;
+}
+
+.requirements {
+  margin: 22px 0 0;
+  max-width: 54ch;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.requirements strong {
+  color: var(--ink);
+  font-weight: 500;
+}
