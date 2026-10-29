@@ -20,8 +20,9 @@ landing page and supporting pages, so a new app is a directory rather than a new
 /aviary/faq            frequently asked questions
 ```
 
-All pages share `styles.css`. Document pages use the `.doc` classes; app landing pages use
-`.page-hero`, `.app-id`, and `.features`.
+All pages share `styles.css`, which imports `tokens.css` (colours, fonts, spacing and type scale)
+and `base.css` (element defaults). `design.md` records the system those files implement. Document
+pages use the `.doc` classes; app landing pages use `.page-hero`, `.app-id`, and `.features`.
 
 Perch Home's pages moved here from `perchhome.app` (maplesmith/perchhome#349). That domain
 redirects to these paths and must stay registered while builds compiled with the old URL are
