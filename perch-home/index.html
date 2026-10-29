@@ -12,119 +12,177 @@
     <link rel="icon" href="../assets/maplesmith-mark.svg" type="image/svg+xml" />
     <link rel="alternate icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="../assets/maplesmith-mark-avatar-180.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;display=swap"
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&amp;f[]=gambetta@600&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
-    <main>
-      <nav aria-label="Primary navigation">
+    <header class="masthead">
+      <nav class="container" aria-label="Primary navigation">
         <a class="wordmark" href="../" aria-label="Maplesmith home">
           <img class="mark" src="../assets/maplesmith-mark.svg" alt="" />
           <span>Maplesmith</span>
         </a>
         <a class="nav-link" href="mailto:hello@maplesmith.dev">Get in touch</a>
       </nav>
-
-      <div class="section-head">
-        <div class="section-heading">
-          <p class="eyebrow section-label"><a href="./" aria-current="page">Perch Home</a></p>
-          <span class="rule" aria-hidden="true"></span>
-          <nav class="section-nav" aria-label="Perch Home pages">
-            <a href="./privacy/">Privacy</a>
-            <a href="./terms/">Terms</a>
-            <a href="./support/">Support</a>
-          </nav>
-        </div>
+    </header>
+    <div class="section-head">
+      <div class="section-heading container">
+        <p class="section-label"><a href="./" aria-current="page">Perch Home</a></p>
+        <span class="rule" aria-hidden="true"></span>
+        <nav class="section-nav" aria-label="Perch Home pages">
+          <a href="./privacy/">Privacy</a>
+          <a href="./terms/">Terms</a>
+          <a href="./support/">Support</a>
+        </nav>
       </div>
+    </div>
 
-      <section class="page-hero" id="top">
-        <p class="eyebrow app-eyebrow">Home dashboard for iPad</p>
-        <div class="app-id">
-          <img class="app-icon" src="../assets/perch-home-icon.png" alt="" />
-          <h1>Perch Home</h1>
+    <main>
+      <section class="page-hero page-hero--banner" id="top">
+        <div class="container">
+          <div class="page-hero-text">
+            <div class="app-id">
+              <img class="app-icon" src="../assets/perch-home-icon.png" width="72" height="72" alt="" />
+              <div>
+                <h1>Perch Home</h1>
+                <p class="subtitle">Home dashboard for iPad</p>
+              </div>
+            </div>
+            <p class="lead">
+              Perch Home turns an iPad into an always-on household display for weather, calendars,
+              photos, and guest Wi-Fi.
+            </p>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://apps.apple.com/app/id6765460334">Download on the App Store</a>
+          </div>
         </div>
-        <p class="intro">
-          Perch Home turns an iPad into an always-on household display for weather, calendars,
-          photos, and guest Wi-Fi.
-        </p>
+      </section>
+
+      <section class="showcase" aria-label="Perch Home on iPad">
+        <div class="container">
+          <figure class="showcase-art">
+            <img
+              class="screen"
+              src="../assets/perch-home-dashboard.png"
+              width="1600"
+              height="1200"
+              fetchpriority="high"
+              alt="Perch Home on an iPad: a photo, the day's calendar, the weather forecast, and the time"
+            />
+          </figure>
+          <div class="showcase-pair">
+            <figure>
+              <img
+                class="screen"
+                src="../assets/perch-home-setup.jpg"
+                width="2000"
+                height="1500"
+                loading="lazy"
+                alt="Perch Home setup: choosing the Family Hub template, with photos, calendar, weather, and clock"
+              />
+              <figcaption>Setup starts with a template.</figcaption>
+            </figure>
+            <figure>
+              <img
+                class="screen"
+                src="../assets/perch-home-photos.jpg"
+                width="2000"
+                height="1500"
+                loading="lazy"
+                alt="Perch Home showing a sunset photo above the clock and the weather forecast"
+              />
+              <figcaption>A photo slideshow with the clock and weather.</figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section class="work" aria-labelledby="features-title">
-        <div class="section-heading">
-          <p class="eyebrow" id="features-title">What it does</p>
-          <span class="rule" aria-hidden="true"></span>
-        </div>
-        <div class="features">
-          <div class="feature">
-            <h3>Weather and time</h3>
-            <p>Current conditions, forecast details, and a readable household clock.</p>
-          </div>
-          <div class="feature">
-            <h3>Calendar events</h3>
-            <p>Apple Calendar and Google Calendar events shown at a glance.</p>
-          </div>
-          <div class="feature">
-            <h3>Photo slideshows</h3>
-            <p>Personal photo library slideshows that stay on the device.</p>
-          </div>
-          <div class="feature">
-            <h3>Guest Wi-Fi</h3>
-            <p>Visitor-friendly network details displayed where your household needs them.</p>
-          </div>
-          <div class="feature">
-            <h3>Simple setup</h3>
-            <p>Template-based onboarding for a focused always-on display.</p>
+        <div class="container features-layout">
+          <h2 id="features-title">What it does</h2>
+          <div class="features features--rows">
+            <div class="feature">
+              <h3>Weather and time</h3>
+              <p>Current conditions, forecast details, and a readable household clock.</p>
+            </div>
+            <div class="feature">
+              <h3>Calendar events</h3>
+              <p>Apple Calendar and Google Calendar events shown at a glance.</p>
+            </div>
+            <div class="feature">
+              <h3>Photo slideshows</h3>
+              <p>Personal photo library slideshows that stay on the device.</p>
+            </div>
+            <div class="feature">
+              <h3>Guest Wi-Fi</h3>
+              <p>Visitor-friendly network details displayed where your household needs them.</p>
+            </div>
+            <div class="feature">
+              <h3>Simple setup</h3>
+              <p>Template-based onboarding for a focused always-on display.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="work" aria-labelledby="privacy-title">
-        <div class="section-heading">
-          <p class="eyebrow" id="privacy-title">Privacy</p>
-          <span class="rule" aria-hidden="true"></span>
-        </div>
-        <p class="intro">
-          Perch Home is designed for personal household use. Most data stays on your device.
-          Calendar, weather, analytics, and crash-reporting services are used only where needed to
-          provide app features and improve reliability.
-        </p>
-        <a class="cta" href="privacy/">Read the privacy policy</a>
-      </section>
-
-      <section class="work" aria-labelledby="sibling-title">
-        <div class="section-heading">
-          <p class="eyebrow" id="sibling-title">Also from Maplesmith</p>
-          <span class="rule" aria-hidden="true"></span>
-        </div>
-        <a class="project" href="../aviary/">
-          <div class="project-art is-icon-only" aria-hidden="true">
-            <img class="project-icon-art" src="../assets/aviary-icon.png" alt="" />
-          </div>
-          <div class="project-copy">
-            <p class="project-type">Smart home dashboard</p>
-            <h2>Aviary <span aria-hidden="true">→</span></h2>
-            <p>
-              Perch Home&rsquo;s sibling app: an always-on smart home view for the iPad, showing
-              accessory status, cameras, weather, and the time.
+      <section class="privacy-band" aria-labelledby="privacy-title">
+        <div class="container privacy-layout">
+          <h2 id="privacy-title">Privacy</h2>
+          <div class="privacy-copy">
+            <p class="lead">
+              Perch Home is designed for personal household use. Most data stays on your device.
+              Calendar, weather, analytics, and crash-reporting services are used only where needed
+              to provide app features and improve reliability.
             </p>
-            <span class="project-link">Learn more</span>
+            <a class="cta" href="privacy/">Read the privacy policy</a>
           </div>
-        </a>
+        </div>
+      </section>
+
+      <section class="work sibling" aria-labelledby="sibling-title">
+        <div class="container">
+          <h2 id="sibling-title">Also from Maplesmith</h2>
+          <a class="project is-flipped" href="../aviary/">
+            <figure class="project-art">
+              <img
+                class="screen"
+                src="../assets/aviary-dashboard.jpg"
+                width="2000"
+                height="1397"
+                loading="lazy"
+                alt="Aviary on an iPad: a backyard camera feed, thermostat, alarm and lock status, and the time"
+              />
+            </figure>
+            <div class="project-copy">
+              <img class="app-icon" src="../assets/aviary-icon.png" width="64" height="64" alt="" />
+              <h3>Aviary</h3>
+              <p class="kind">Smart home dashboard</p>
+              <p class="desc">
+                Perch Home&rsquo;s sibling app: an always-on smart home view for the iPad, showing
+                accessory status, cameras, weather, and the time.
+              </p>
+              <span class="project-link">Learn more</span>
+            </div>
+          </a>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <a class="wordmark" href="../">
-        <img class="mark" src="../assets/maplesmith-mark.svg" alt="" />
-        <span>Maplesmith</span>
-      </a>
-      <p>Perch Home is made by Maplesmith.</p>
-      <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a>
+    <footer class="site-footer">
+      <div class="container">
+        <a class="wordmark" href="../">
+          <img class="mark" src="../assets/maplesmith-mark.svg" alt="" />
+          <span>Maplesmith</span>
+        </a>
+        <p>Perch Home is made by Maplesmith.</p>
+        <a href="mailto:support@maplesmith.dev">support@maplesmith.dev</a>
+      </div>
     </footer>
   </body>
 </html>
