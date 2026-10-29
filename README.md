@@ -20,10 +20,6 @@ landing page and supporting pages, so a new app is a directory rather than a new
 /aviary/faq            frequently asked questions
 ```
 
-Aviary is not on the App Store yet, so its landing page and both project tiles carry a
-"Coming soon" badge instead of a download link. Search the site for `COMING SOON` to find every
-place that has to change on release.
-
 All pages share `styles.css`. Document pages use the `.doc` classes; app landing pages use
 `.page-hero`, `.app-id`, and `.features`.
 
