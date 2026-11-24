@@ -52,4 +52,6 @@ the destination, and the 180px / 32px exports for Apple touch icons and favicon 
 1. Create a public GitHub repository named `maplesmith-site` in the Maplesmith organization and push this project.
 2. In the repository, open **Settings → Pages** and set the source to **GitHub Actions**. Every push to `main` runs `.github/workflows/pages.yml`, which builds the site into `_site` and deploys it.
 3. Set the custom domain to `maplesmith.dev`. The included `CNAME` file keeps that setting in the repository.
-4. At Porkbun, add the GitHub Pages DNS records shown in GitHub’s custom-domain instructions. Keep all existing iCloud Mail records unchanged.
+4. The domain's nameservers point at Cloudflare, so DNS is managed there, not at the registrar. In Cloudflare DNS, add the GitHub Pages records shown in GitHub’s custom-domain instructions. Keep all existing iCloud Mail records unchanged.
+
+Cloudflare proxies the site and adds its Web Analytics script to each page as it serves it, so the script isn't in this repo. It's only added for browser requests, so a plain `curl` won't show it.
